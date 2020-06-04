@@ -34,7 +34,7 @@
                             <small>Active</small>
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">Add</button>
+                            <button type="button" class="btn btn-sm btn-primary">Go to Dashboard</button>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             <small>Active</small>
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">Add</button>
+                            <a href="<?= base_url('penghunian') ?>" type="button" class="btn btn-sm btn-primary">Go to Dashboard</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                             <small>Active</small>
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">Add</button>
+                            <button type="button" class="btn btn-sm btn-primary">Go to Dashboard</button>
                         </div>
                     </div>
                 </div>
