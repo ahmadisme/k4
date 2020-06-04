@@ -29,7 +29,7 @@
                             <h4 class="mb-0">
                                 <a href="#!">Jumlah TB</a>
                             </h4>
-                            <p class="text-sm text-muted mb-0">Working remoteley</p>
+                            <p class="text-sm text-muted mb-0"><?= $jumlah_tb->total ?></p>
                             <span class="text-success">●</span>
                             <small>Active</small>
                         </div>
@@ -54,7 +54,7 @@
                             <h4 class="mb-0">
                                 <a href="#!">Terhuni</a>
                             </h4>
-                            <p class="text-sm text-muted mb-0">Working remoteley</p>
+                            <p class="text-sm text-muted mb-0"><?= $jumlah_huni ?></p>
                             <span class="text-success">●</span>
                             <small>Active</small>
                         </div>
@@ -79,7 +79,7 @@
                             <h4 class="mb-0">
                                 <a href="#!">BAST</a>
                             </h4>
-                            <p class="text-sm text-muted mb-0">Working remoteley</p>
+                            <p class="text-sm text-muted mb-0"><?= $jumlah_proses_pembuatan_bast + $jumlah_sudah_bast ?></p>
                             <span class="text-success">●</span>
                             <small>Active</small>
                         </div>
@@ -162,6 +162,41 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
 
+
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card bg-pink">
+                <div class="card-header bg-transparent">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h6 class="text-light text-white text-uppercase ls-1 mb-1">Overview</h6>
+                            <h5 class="h1 text-white mb-0">Penghunian</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="penghunian" class="chart-canvas"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card bg-gradient-info">
+                <div class="card-header bg-transparent">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h6 class="text-uppercase text-white text-muted ls-1 mb-1">Overview</h6>
+                            <h5 class="h1 text-white mb-0">Pengelolaan</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="pengelolaan" class="chart-canvas"></div>
+                </div>
+            </div>
+        </div>
     </div>

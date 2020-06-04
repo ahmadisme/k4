@@ -19,6 +19,70 @@
 <script src="<?= base_url('assets/argon/') ?>assets/js/argon.min9f1e.js?v=1.1.0"></script>
 <!-- Demo JS - remove this in your project -->
 <script src="<?= base_url('assets/argon/') ?>assets/js/demo.min.js"></script>
+
+<script src="<?= base_url('assets/amcharts4/') ?>core.js"></script>
+<script src="<?= base_url('assets/amcharts4/') ?>charts.js"></script>
+<script src="<?= base_url('assets/amcharts4/') ?>themes/animated.js"></script>
+
+<script>
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("penghunian", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        chart.data = [{
+                country: "Lithuania",
+                litres: 501.9
+            },
+            {
+                country: "Czech Republic",
+                litres: 301.9
+            }
+        ];
+
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+
+    }); // end am4core.ready()
+</script>
+
+<script>
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("pengelolaan", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        chart.data = [{
+                country: "Lithuania",
+                litres: 501.9
+            },
+            {
+                country: "Czech Republic",
+                litres: 301.9
+            }
+        ];
+
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+
+    }); // end am4core.ready()
+</script>
+
+
 <script type="text/javascript">
     $(document).ready(function() {
         tampil_data_provinsi();

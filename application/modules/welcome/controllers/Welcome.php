@@ -15,6 +15,11 @@ class Welcome extends CI_Controller
         $data['title']     = "SIRUSUN v3.0";
         $data['title2'] = "Dashboard";
         $data['id_provinsi'] = $this->welcome_model->get_id();
+        $data['jumlah_huni'] = $this->welcome_model->jumlah_huni();
+        $data['jumlah_tb'] = $this->db->query('SELECT tb, sum(tb) AS total FROM tb_bangunan')->row();
+        $data['jumlah_proses_pembuatan_bast'] = $this->welcome_model->jumlah_proses_pembuatan_bast();
+        $data['jumlah_sudah_bast'] = $this->welcome_model->jumlah_sudah_bast();
+
 
         $this->load->view('layout/header', $data);
         $this->load->view('blank', $data);
