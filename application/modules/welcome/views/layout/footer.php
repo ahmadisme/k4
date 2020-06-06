@@ -136,7 +136,7 @@
 
 <script>
     $(document).ready(function() {
-        $('#provinsi').change(function() {
+        $('#provinsi').mouseover(function() {
             var id = $(this).val();
             $.ajax({
                 url: "<?php echo base_url('welcome'); ?>/get_nama_provinsi",
