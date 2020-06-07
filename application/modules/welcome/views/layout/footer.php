@@ -23,6 +23,100 @@
 <script src="<?= base_url('assets/amcharts4/') ?>core.js"></script>
 <script src="<?= base_url('assets/amcharts4/') ?>charts.js"></script>
 <script src="<?= base_url('assets/amcharts4/') ?>themes/animated.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#1').DataTable({
+            "iDisplayLength": 5,
+            "aLengthMenu": [
+                [5, 10, 15, -1],
+                [5, 10, 15, "All"]
+            ]
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#2').DataTable({
+            "iDisplayLength": 5,
+            "aLengthMenu": [
+                [5, 10, 15, -1],
+                [5, 10, 15, "All"]
+            ]
+        });
+    });
+</script>
+
+<script>
+    am4core.ready(function() {
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("penghunian", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        chart.data = [{
+                country: "Huni",
+                litres: <?= $huni ?>
+            },
+            {
+                country: "Belum Huni",
+                litres: <?= $belum_huni ?>
+            }
+
+        ];
+
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+
+        pieSeries.ticks.template.disabled = true;
+        pieSeries.alignLabels = false;
+        pieSeries.labels.template.text = "{value.percent.formatNumber('#.0')}%";
+        pieSeries.labels.template.radius = am4core.percent(-40);
+        pieSeries.labels.template.fill = am4core.color("white");
+
+    }); // end am4core.ready()
+</script>
+
+<script>
+    am4core.ready(function() {
+        am4core.useTheme(am4themes_animated);
+
+        var chart = am4core.create("pengelolaan", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        chart.data = [{
+            "country": "Belum Proses",
+            "litres": 4,
+            "color": am4core.color("#ff0000")
+        }, {
+            "country": "Proses",
+            "litres": 5,
+            "color": am4core.color("#ffff00")
+        }, {
+
+            "country": "Sudah BAST",
+            "litres": 3,
+            "color": am4core.color("#00ff00")
+        }];
+
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+        pieSeries.slices.template.propertyFields.fill = "color";
+        pieSeries.ticks.template.disabled = true;
+        pieSeries.alignLabels = false;
+        pieSeries.labels.template.text = "{value.percent.formatNumber('#.0')}%";
+        pieSeries.labels.template.radius = am4core.percent(-40);
+        pieSeries.labels.template.fill = am4core.color("white");
+
+    }); // end am4core.ready()
+</script>
+
 <!-- <script type="text/javascript">
     $(document).ready(function() {
         tampil_data_provinsi();

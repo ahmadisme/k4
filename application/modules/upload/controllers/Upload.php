@@ -109,7 +109,7 @@ class Upload extends CI_Controller
 
 
             $insert = $this->db->insert("tb_bangunan", $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-sucess" role="alert">Please Login!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil di Upload!</div>');
         }
         redirect('upload');
     }
