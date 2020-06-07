@@ -85,7 +85,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('welcome') ?>">
                                 <i class="ni ni-archive-2 text-green"></i>
-                                <span class="nav-link-text">Widgets</span>
+                                <span class="nav-link-text">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">

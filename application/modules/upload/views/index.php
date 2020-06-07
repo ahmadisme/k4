@@ -104,12 +104,12 @@
                 <!-- Card body -->
                 <div class="card-body">
                     <!-- List group -->
-                    <form>
+                    <form action="<?= base_url('upload/do_upload_bangunan') ?>" method="post" enctype="multipart/form-data">
                         <div class="custom-file">
                             <input type="file" class="form-control" id="customFileLang" name="bangunan">
                         </div>
                         <div class="mt-3">
-                            <button type="button" class="btn btn-default">Upload</button>
+                            <button type="submit" class="btn btn-default">Upload</button>
                         </div>
                     </form>
                 </div>
