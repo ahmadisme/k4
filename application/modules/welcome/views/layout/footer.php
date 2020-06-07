@@ -70,7 +70,8 @@
         var pieSeries = chart.series.push(new am4charts.PieSeries());
         pieSeries.dataFields.value = "litres";
         pieSeries.dataFields.category = "country";
-
+        pieSeries.labels.template.fontSize = 23;
+        pieSeries.labels.template.fontWeight = "bold";
         pieSeries.ticks.template.disabled = true;
         pieSeries.alignLabels = false;
         pieSeries.labels.template.text = "{value.percent.formatNumber('#.0')}%";
@@ -91,16 +92,16 @@
 
         chart.data = [{
             "country": "Belum Proses",
-            "litres": 4,
+            "litres": <?= $diagram_pengelolaan->belum ?>,
             "color": am4core.color("#ff0000")
         }, {
             "country": "Proses",
-            "litres": 5,
+            "litres": <?= $diagram_pengelolaan->proses ?>,
             "color": am4core.color("#ffff00")
         }, {
 
             "country": "Sudah BAST",
-            "litres": 3,
+            "litres": <?= $diagram_pengelolaan->sudah_bast ?>,
             "color": am4core.color("#00ff00")
         }];
 
@@ -110,6 +111,8 @@
         pieSeries.slices.template.propertyFields.fill = "color";
         pieSeries.ticks.template.disabled = true;
         pieSeries.alignLabels = false;
+        pieSeries.labels.template.fontSize = 23;
+        pieSeries.labels.template.fontWeight = "bold";
         pieSeries.labels.template.text = "{value.percent.formatNumber('#.0')}%";
         pieSeries.labels.template.radius = am4core.percent(-40);
         pieSeries.labels.template.fill = am4core.color("white");

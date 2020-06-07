@@ -108,9 +108,9 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/docs/getting-started/overview.html" target="_blank">
+                            <a class="nav-link" href="<?= base_url('setting') ?>">
                                 <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Getting started</span>
+                                <span class="nav-link-text">Setting</span>
                             </a>
                         </li>
                         <li class="nav-item">

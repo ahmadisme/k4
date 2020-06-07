@@ -24,141 +24,90 @@
 <script src="<?= base_url('assets/amcharts4/') ?>charts.js"></script>
 <script src="<?= base_url('assets/amcharts4/') ?>themes/animated.js"></script>
 
+<script src="<?= base_url('assets/highmaps') ?>/maps/highmaps.js"></script>
+<script src="<?= base_url('assets/highmaps') ?>/maps/modules/exporting.js"></script>
+<script src="<?= base_url('assets/highmaps') ?>/mapdata/countries/id/kaltara.js"></script>
 <script>
-    am4core.ready(function() {
+    var data = [
+        ['id-3700', 0],
+        ['id-ac', 1],
+        ['id-jt', 2],
+        ['id-be', 3],
+        ['id-bt', 4],
+        ['id-kb', 5],
+        ['id-bb', 6],
+        ['id-ba', 7],
+        ['id-ji', 8],
+        ['id-ks', 9],
+        ['id-nt', 10],
+        ['id-se', 11],
+        ['id-kr', 12],
+        ['id-ib', 13],
+        ['id-su', 14],
+        ['id-ri', 15],
+        ['id-sw', 16],
+        ['id-ku', 17],
+        ['id-la', 18],
+        ['id-sb', 19],
+        ['id-ma', 20],
+        ['id-nb', 21],
+        ['id-sg', 22],
+        ['id-st', 23],
+        ['id-pa', 24],
+        ['id-jr', 25],
+        ['id-ki', 26],
+        ['id-1024', 27],
+        ['id-jk', 28],
+        ['id-go', 29],
+        ['id-yo', 30],
+        ['id-sl', 31],
+        ['id-sr', 32],
+        ['id-ja', 33],
+        ['id-kt', 34]
+    ];
 
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
+    // Create the chart
+    Highcharts.mapChart('container', {
+        chart: {
+            map: 'countries/id/id-all'
+        },
 
-        var chart = am4core.create("penghunian", am4charts.PieChart3D);
-        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        title: {
+            text: 'Highmaps basic demo'
+        },
 
-        chart.legend = new am4charts.Legend();
+        subtitle: {
+            text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/id/id-all.js">Indonesia</a>'
+        },
 
-        chart.data = [{
-                country: "Huni",
-                litres: <?= $jumlah_huni ?>
-            },
-            {
-                country: "Belum Huni",
-                litres: <?= $jumlah_belum_huni ?>
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
             }
-        ];
+        },
 
-        var series = chart.series.push(new am4charts.PieSeries3D());
-        series.dataFields.value = "litres";
-        series.dataFields.category = "country";
+        colorAxis: {
+            min: 0
+        },
 
-        series.ticks.template.disabled = true;
-        series.alignLabels = false;
-        series.labels.template.text = "{value.percent.formatNumber('#.0')}%";
-        series.labels.template.radius = am4core.percent(-40);
-        series.labels.template.fill = am4core.color("white");
-
-
-    }); // end am4core.ready()
-</script>
-
-<script>
-    am4core.ready(function() {
-
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
-
-        var chart = am4core.create("pengelolaan", am4charts.PieChart3D);
-        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-        chart.legend = new am4charts.Legend();
-
-        chart.data = [{
-                country: "Belum bisa Proses",
-                litres: <?= $jumlah_belum_bisa_bast ?>
-            },
-            {
-                country: "Proses",
-                litres: <?= $jumlah_proses_setneg + $jumlah_proses_kemenkeu + $jumlah_pengembalian + $jumlah_proses_satker + $jumlah_sekjen + $jumlah_setditjen + $jumlah_proses_lengkap ?>
-            },
-            {
-                country: "BAST",
-                litres: <?= $jumlah_proses_pembuatan_bast + $jumlah_sudah_bast ?>
-            }
-        ];
-
-        var series = chart.series.push(new am4charts.PieSeries3D());
-        series.dataFields.value = "litres";
-        series.dataFields.category = "country";
-
-        series.ticks.template.disabled = true;
-        series.alignLabels = false;
-        series.labels.template.text = "{value.percent.formatNumber('#.0')}%";
-        series.labels.template.radius = am4core.percent(-40);
-        series.labels.template.fill = am4core.color("white");
-
-    }); // end am4core.ready()
-</script>
-
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        tampil_data_provinsi();
-
-        $('#mydata').dataTable({
-            "autoWidth": false,
-        });
-
-
-        function tampil_data_provinsi() {
-            $.ajax({
-                type: 'ajax',
-                url: '<?= base_url('welcome') ?>/get_data',
-                async: false,
-                dataType: 'json',
-                success: function(data) {
-                    var html = '';
-                    var i;
-                    for (i = 0; i < data.length; i++) {
-                        html += '<tr>' +
-                            '<td>' + data[i].id + '</td>' +
-                            '<td>' + data[i].id_provinsi + '</td>' +
-                            '<td>' + data[i].nama_provinsi + '</td>' +
-                            '</tr>';
-                    }
-                    $('#show_data').html(html);
+        series: [{
+            data: data,
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: '#BADA55'
                 }
-
-            });
-        }
-
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }]
     });
 </script>
 
-<script>
-    $(document).ready(function() {
-        $('#provinsi').change(function() {
-            var id = $(this).val();
-            $.ajax({
-                url: "<?php echo base_url('welcome'); ?>/get_nama_provinsi",
-                method: "POST",
-                data: {
-                    id: id
-                },
-                async: false,
-                dataType: 'json',
-                success: function(data) {
-                    var html = '';
-                    var i;
-                    for (i = 0; i < data.length; i++) {
-                        html += '<option>' + data[i].nama_provinsi + '</option>';
-                    }
-                    $('#nama_provinsi').html(html);
 
-                }
-            });
-        });
-    });
-</script>
 
 </body>
 

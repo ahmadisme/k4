@@ -32,23 +32,17 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/argon/') ?>assets/css/argon.min9f1e.css?v=1.1.0" type="text/css">
     <style>
-        table {
-            table-layout: fixed;
-            width: 100%;
+        #container {
+            height: 500px;
+            min-width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
-        td {
-            width: auto;
-        }
-
-        #penghunian {
-            width: 100%;
-            height: 700px;
-        }
-
-        #pengelolaan {
-            width: 100%;
-            height: 700px;
+        .loading {
+            margin-top: 10em;
+            text-align: center;
+            color: gray;
         }
     </style>
 

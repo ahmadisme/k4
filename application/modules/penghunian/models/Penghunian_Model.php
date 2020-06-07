@@ -23,11 +23,4 @@ class Penghunian_Model extends CI_Model
             return 0;
         }
     }
-
-    public function get_data()
-    {
-
-        $hasil = $this->db->query('SELECT * FROM tb_bangunan GROUP BY penerima_manfaat');
-        return $hasil->result();
-    }
 }
