@@ -28,6 +28,30 @@
 <script src="<?= base_url('assets/highmaps') ?>/maps/modules/exporting.js"></script>
 <script src="<?= base_url('assets/highmaps') ?>/mapdata/countries/id/kaltara.js"></script>
 <script>
+    $(document).ready(function() {
+        $('#1').DataTable({
+            "autoWidth": true,
+            "iDisplayLength": 5,
+            "aLengthMenu": [
+                [5, 10, 15, -1],
+                [5, 10, 15, "All"]
+            ]
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#2').DataTable({
+            "autoWidth": true,
+            "iDisplayLength": 5,
+            "aLengthMenu": [
+                [5, 10, 15, -1],
+                [5, 10, 15, "All"]
+            ]
+        });
+    });
+</script>
+<script>
     var data = [
         ['id-3700', 0],
         ['id-ac', 1],
@@ -73,7 +97,7 @@
         },
 
         title: {
-            text: 'Highmaps basic demo'
+            text: 'Persebaran Penghunian'
         },
 
         subtitle: {
