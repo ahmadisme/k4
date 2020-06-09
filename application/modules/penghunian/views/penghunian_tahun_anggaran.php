@@ -3,9 +3,9 @@
     <div class="container-fluid">
         <div class="header-body">
             <div class="row align-items-center py-4">
-                <?= $this->session->flashdata('message') ?>
+
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Penghunian</h6>
+                    <h6 class="h2 text-white d-inline-block mb-0">Penghunian Tahun Anggaran <?= $tahun_anggaran ?></h6>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                                 <a href="#!">Jumlah TB</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
-                                <font style="font-weight: bold;"><?= $jumlah_tb->total ?></font>
+                                <font style="font-weight: bold;"></font>
                             </p>
                             <span class="text-success">●</span>
                             <small>Active</small>
@@ -55,7 +55,7 @@
                                 <a href="#!">Terhuni</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
-                                <font style="font-weight: bold;"><?= $huni ?></font>
+                                <font style="font-weight: bold;"></font>
                             </p>
                             <span class="text-success">●</span>
                             <small>Active</small>
@@ -80,7 +80,7 @@
                                 <a href="#!">Belum Huni</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
-                                <font style="font-weight: bold;"><?= $belum_huni ?></font>
+                                <font style="font-weight: bold;"></font>
                             </p>
                             <span class="text-success">●</span>
                             <small>Active</small>
@@ -102,9 +102,6 @@
                     <li class="nav-item">
                         <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Penghunian Penerima Manfaat</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-calendar-grid-58 mr-2"></i>Peta</a>
-                    </li>
                 </ul>
             </div>
             <div class="card shadow">
@@ -114,21 +111,14 @@
                             <table class="table table-hover" id="1">
                                 <thead>
                                     <tr>
-                                        <th>Tahun Anggaran</th>
-                                        <th>Jumlah TB Huni</th>
+                                        <th>Lokasi</th>
+                                        <th>Penghunian</th>
                                         <th>Jumlah TB Belum Huni</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($rekap_tahun_anggaran as $rta) { ?>
-                                        <tr>
-                                            <td><?= $rta->ta ?></td>
-                                            <td><?= $rta->huni ?></td>
-                                            <td><?= $rta->belum_huni ?></td>
-                                            <td><a href="<?= base_url('penghunian/penghunian_tahun_anggaran/') . $rta->ta ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
-                                        </tr>
-                                    <?php } ?>
+
                                 </tbody>
                             </table>
                         </div>
@@ -136,26 +126,16 @@
                             <table class="table table-hover" id="2">
                                 <thead>
                                     <tr>
-                                        <th>Penerima Manfaat</th>
-                                        <th>Jumlah TB Huni</th>
+                                        <th>Lokasi</th>
+                                        <th>Penghunian</th>
                                         <th>Jumlah TB Belum Huni</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($rekap_penerima_manfaat as $rpm) { ?>
-                                        <tr>
-                                            <td><?= $rpm->nama_penerima_manfaat ?></td>
-                                            <td><?= $rpm->huni ?></td>
-                                            <td><?= $rpm->belum_huni ?></td>
-                                            <td><a href="<?= base_url('penghunian/penerima_manfaat/') . $rpm->id_penerima_manfaat ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
-                                        </tr>
-                                    <?php } ?>
+
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                            <div id="container"></div>
                         </div>
                     </div>
                 </div>
