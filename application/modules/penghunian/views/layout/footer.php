@@ -30,7 +30,7 @@
 <script>
     $(document).ready(function() {
         $('#1').DataTable({
-            "autoWidth": true,
+            "autoWidth": false,
             "iDisplayLength": 5,
             "aLengthMenu": [
                 [5, 10, 15, -1],
@@ -42,7 +42,7 @@
 <script>
     $(document).ready(function() {
         $('#2').DataTable({
-            "autoWidth": true,
+            "autoWidth": false,
             "iDisplayLength": 5,
             "aLengthMenu": [
                 [5, 10, 15, -1],
@@ -52,42 +52,45 @@
     });
 </script>
 <script>
+    // Prepare demo data
+    // Data is joined to map using value of 'hc-key' property by default.
+    // See API docs for 'joinBy' for more info on linking data and map.
     var data = [
         ['id-3700', 0],
-        ['id-ac', 1],
-        ['id-jt', 2],
-        ['id-be', 3],
-        ['id-bt', 4],
-        ['id-kb', 5],
-        ['id-bb', 6],
-        ['id-ba', 7],
-        ['id-ji', 8],
-        ['id-ks', 9],
-        ['id-nt', 10],
-        ['id-se', 11],
-        ['id-kr', 12],
-        ['id-ib', 13],
-        ['id-su', 14],
-        ['id-ri', 15],
-        ['id-sw', 16],
-        ['id-ku', 17],
-        ['id-la', 18],
-        ['id-sb', 19],
-        ['id-ma', 20],
-        ['id-nb', 21],
-        ['id-sg', 22],
-        ['id-st', 23],
-        ['id-pa', 24],
-        ['id-jr', 25],
-        ['id-ki', 26],
-        ['id-1024', 27],
-        ['id-jk', 28],
-        ['id-go', 29],
-        ['id-yo', 30],
-        ['id-sl', 31],
-        ['id-sr', 32],
-        ['id-ja', 33],
-        ['id-kt', 34]
+        ['id-ac', 1, <?= $aceh->huni ?>, <?= $aceh->belum_huni ?>, "Aceh"],
+        ['id-ki', 2, <?= $kaltim->huni ?>, <?= $kaltim->belum_huni ?>, "Kalimantan Timur"],
+        ['id-jt', 3, <?= $jateng->huni ?>, <?= $jateng->belum_huni ?>, "Jawa Tengah"],
+        ['id-be', 4, <?= $bengkulu->huni ?>, <?= $bengkulu->belum_huni ?>, "Bengkulu"],
+        ['id-bt', 5, <?= $banten->huni ?>, <?= $banten->belum_huni ?>, "Banten"],
+        ['id-kb', 6, <?= $kalbar->huni ?>, <?= $kalbar->belum_huni ?>, "Kalimantan Barat"],
+        ['id-bb', 7, <?= $babel->huni ?>, <?= $babel->belum_huni ?>, "Bangka Belitung"],
+        ['id-ba', 8, <?= $bali->huni ?>, <?= $bali->belum_huni ?>, "Bali"],
+        ['id-ji', 9, <?= $jatim->huni ?>, <?= $jatim->belum_huni ?>, "Jawa Timur"],
+        ['id-ks', 10, <?= $kalsel->huni ?>, <?= $kalsel->belum_huni ?>, "Kalimantan Selatan"],
+        ['id-nt', 11, <?= $ntt->huni ?>, <?= $ntt->belum_huni ?>, "Nusa Tenggara Timur"],
+        ['id-se', 12, <?= $sulsel->huni ?>, <?= $sulsel->belum_huni ?>, "Sulawesi Selatan"],
+        ['id-kr', 13, <?= $kepri->huni ?>, <?= $kepri->belum_huni ?>, "Kepulauan Riau"],
+        ['id-ib', 14, <?= $papbar->huni ?>, <?= $papbar->belum_huni ?>, "Papua Barat"],
+        ['id-su', 15, <?= $sumut->huni ?>, <?= $sumut->belum_huni ?>, "Sumatera Utara"],
+        ['id-ri', 16, <?= $riau->huni ?>, <?= $riau->belum_huni ?>, "Riau"],
+        ['id-sw', 17, <?= $sulut->huni ?>, <?= $sulut->belum_huni ?>, "Sulawesi Utara"],
+        ['id-la', 18, <?= $malut->huni ?>, <?= $malut->belum_huni ?>, "Maluku Utara"],
+        ['id-sb', 19, <?= $sumbar->huni ?>, <?= $sumbar->belum_huni ?>, "Sumatera Barat"],
+        ['id-ma', 20, <?= $maluku->huni ?>, <?= $maluku->belum_huni ?>, "Maluku"],
+        ['id-nb', 21, <?= $ntb->huni ?>, <?= $ntb->belum_huni ?>, "Nusa Tenggara Barat"],
+        ['id-sg', 22, <?= $sultra->huni ?>, <?= $sultra->belum_huni ?>, "Sulawesi Tenggara"],
+        ['id-st', 23, <?= $sulteng->huni ?>, <?= $sulteng->belum_huni ?>, "Sulawesi Tengah"],
+        ['id-pa', 24, <?= $papua->huni ?>, <?= $papua->belum_huni ?>, "Papua"],
+        ['id-jr', 25, <?= $jabar->huni ?>, <?= $jabar->belum_huni ?>, "Jawa Barat"],
+        ['id-1024', 26, <?= $lampung->huni ?>, <?= $lampung->belum_huni ?>, "Lampung"],
+        ['id-jk', 27, <?= $jakarta->huni ?>, <?= $jakarta->belum_huni ?>, "DKI Jakarta"],
+        ['id-go', 28, <?= $gorontalo->huni ?>, <?= $gorontalo->belum_huni ?>, "Gorontalo"],
+        ['id-yo', 29, <?= $yogya->huni ?>, <?= $yogya->belum_huni ?>, "D.I Yogyakarta"],
+        ['id-kt', 30, <?= $kalteng->huni ?>, <?= $kalteng->belum_huni ?>, "Kalimantan Tengah"],
+        ['id-sl', 31, <?= $sumsel->huni ?>, <?= $sumsel->belum_huni ?>, "Sumatera Selatan"],
+        ['id-sr', 32, <?= $sulbar->huni ?>, <?= $sulbar->belum_huni ?>, "Sulawesi Barat"],
+        ['id-ja', 33, <?= $jambi->huni ?>, <?= $jambi->belum_huni ?>, "Jambi"],
+        ['id-ku', 34, <?= $kaltara->huni ?>, <?= $kaltara->belum_huni ?>, "Kalimantan Utara"]
     ];
 
     // Create the chart
@@ -97,7 +100,7 @@
         },
 
         title: {
-            text: 'Persebaran Penghunian'
+            text: 'Persebaran Rumah Susun di Indonesia'
         },
 
         subtitle: {
@@ -111,23 +114,36 @@
             }
         },
 
+
         colorAxis: {
             min: 0
         },
-
         series: [{
             data: data,
-            name: 'Random data',
+            name: '<font size="5">Data Penghunian</font>',
+            enableMouseTracking: true,
+            keys: ['hc-key', 'rank', 'value1', 'value2', 'value3'],
             states: {
+
                 hover: {
-                    color: '#BADA55'
+                    color: '#ffe5b4'
                 }
             },
             dataLabels: {
                 enabled: true,
                 format: '{point.name}'
-            }
-        }]
+            },
+
+        }],
+        tooltip: {
+            useHTML: true,
+            followPointer: false,
+            style: {
+                pointerEvents: "auto"
+            },
+
+            pointFormat: '<span><img src="<?= base_url('assets') ?>/img/flat.png" width="50" height="50"> <font size="5">Huni:  <b>{point.value1}</b>,<img src="<?= base_url('assets') ?>/img/flat_grey.png" width="50" height="50"> Belum Huni: <b>{point.value2}</b></span></br></br><a href="<?= base_url('penghunian') ?>/penghunian_provinsi/{point.rank}" target="_blank">Detail Provinsi {point.value3}</a></font>'
+        }
     });
 </script>
 

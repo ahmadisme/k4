@@ -45,6 +45,8 @@
             color: gray;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -73,158 +75,17 @@
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <!-- Nav items -->
                     <ul class="navbar-nav">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
-                                <i class="ni ni-shop text-primary"></i>
-                                <span class="nav-link-text">Dashboards</span>
-                            </a>
-                            <div class="collapse" id="navbar-dashboards">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/dashboard.html" class="nav-link">Dashboard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/alternative.html" class="nav-link">Alternative</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
-                                <i class="ni ni-ungroup text-orange"></i>
-                                <span class="nav-link-text">Examples</span>
-                            </a>
-                            <div class="collapse" id="navbar-examples">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/pricing.html" class="nav-link">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/login.html" class="nav-link">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/register.html" class="nav-link">Register</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/lock.html" class="nav-link">Lock</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/timeline.html" class="nav-link">Timeline</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/examples/profile.html" class="nav-link">Profile</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-components">
-                                <i class="ni ni-ui-04 text-info"></i>
-                                <span class="nav-link-text">Components</span>
-                            </a>
-                            <div class="collapse" id="navbar-components">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/buttons.html" class="nav-link">Buttons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/cards.html" class="nav-link">Cards</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/grid.html" class="nav-link">Grid</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/notifications.html" class="nav-link">Notifications</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/icons.html" class="nav-link">Icons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/components/typography.html" class="nav-link">Typography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#navbar-multilevel" class="nav-link" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-multilevel">Multi level</a>
-                                        <div class="collapse show" id="navbar-multilevel" style="">
-                                            <ul class="nav nav-sm flex-column">
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">Third level menu</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">Just another link</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">One last link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
-                                <i class="ni ni-single-copy-04 text-pink"></i>
-                                <span class="nav-link-text">Forms</span>
-                            </a>
-                            <div class="collapse" id="navbar-forms">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/forms/elements.html" class="nav-link">Elements</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/forms/components.html" class="nav-link">Components</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/forms/validation.html" class="nav-link">Validation</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-tables">
-                                <i class="ni ni-align-left-2 text-default"></i>
-                                <span class="nav-link-text">Tables</span>
-                            </a>
-                            <div class="collapse show" id="navbar-tables">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="tables.html" class="nav-link">Tables</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="sortable.html" class="nav-link">Sortable</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="datatables.html" class="nav-link active">Datatables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="ni ni-map-big text-primary"></i>
-                                <span class="nav-link-text">Maps</span>
-                            </a>
-                            <div class="collapse" id="navbar-maps">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/maps/google.html" class="nav-link">Google</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://demos.creative-tim.com/argon-dashboard-pro/pages/maps/vector.html" class="nav-link">Vector</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/pages/widgets.html">
+                            <a class="nav-link" href="<?= base_url('welcome') ?>">
                                 <i class="ni ni-archive-2 text-green"></i>
-                                <span class="nav-link-text">Widgets</span>
+                                <span class="nav-link-text">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/pages/charts.html">
+                            <a class="nav-link" href="<?= base_url('upload') ?>">
                                 <i class="ni ni-chart-pie-35 text-info"></i>
-                                <span class="nav-link-text">Charts</span>
+                                <span class="nav-link-text">Upload</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -241,9 +102,9 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/docs/getting-started/overview.html" target="_blank">
+                            <a class="nav-link" href="<?= base_url('setting') ?>">
                                 <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Getting started</span>
+                                <span class="nav-link-text">Setting</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -496,7 +357,7 @@
                                     <span>Support</span>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="<?= base_url('auth/logout') ?>" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
                                     <span>Logout</span>
                                 </a>

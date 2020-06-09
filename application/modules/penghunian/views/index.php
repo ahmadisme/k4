@@ -15,7 +15,6 @@
 <div class="container-fluid mt--6">
     <!-- Table -->
     <div class="row">
-
         <div class="col-4">
             <div class="card">
                 <!-- Card body -->
@@ -118,6 +117,7 @@
                                         <th>Tahun Anggaran</th>
                                         <th>Jumlah TB Huni</th>
                                         <th>Jumlah TB Belum Huni</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -126,6 +126,7 @@
                                             <td><?= $rta->ta ?></td>
                                             <td><?= $rta->huni ?></td>
                                             <td><?= $rta->belum_huni ?></td>
+                                            <td><a href="<?= base_url('penghunian/tahun_anggaran/') . $rta->ta ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -138,6 +139,7 @@
                                         <th>Penerima Manfaat</th>
                                         <th>Jumlah TB Huni</th>
                                         <th>Jumlah TB Belum Huni</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -146,6 +148,7 @@
                                             <td><?= $rpm->nama_penerima_manfaat ?></td>
                                             <td><?= $rpm->huni ?></td>
                                             <td><?= $rpm->belum_huni ?></td>
+                                            <td><a href="<?= base_url('penghunian/penerima_manfaat/') . $rpm->id_penerima_manfaat ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
