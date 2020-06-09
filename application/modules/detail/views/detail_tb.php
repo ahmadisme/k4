@@ -1,11 +1,11 @@
 <!-- Header -->
-<div class="header pb-3 d-flex align-items-center" style="min-height: 500px; background-image: url(../../assets/img/gdg.jpeg); background-size: cover; background-position: center top;">
+<div class="header pb-3 d-flex align-items-center" style="min-height: 300px; background-image: url(../../assets/img/gdg.jpeg); background-size: cover; background-position: center top;">
     <!-- Mask -->
     <span class="mask bg-gradient-default opacity-8"></span>
     <!-- Header container -->
     <div class="container-fluid d-flex align-items-center">
         <div class="row">
-            <div class="col-lg-7 col-md-10">
+            <div class="col-lg-12 col-md-5">
                 <h1 class="display-2 text-white"><?= $detail->nama_bangunan ?></h1>
             </div>
         </div>
@@ -16,12 +16,12 @@
     <div class="row">
         <div class="col-xl-4 order-xl-2">
             <div class="card card-profile">
-                <img src="../../assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
+                <img src="<?= base_url('assets/img/logoo.png') ?>" width="50" height="150" class="card-img-top">
                 <div class="row justify-content-center">
                     <div class="col-lg-3 order-lg-2">
                         <div class="card-profile-image">
                             <a href="#">
-                                <img src="../../assets/img/theme/team-4.jpg" class="rounded-circle">
+                                <img src="<?= base_url('assets/img/logoo.png') ?>" class="rounded-circle">
                             </a>
                         </div>
                     </div>
