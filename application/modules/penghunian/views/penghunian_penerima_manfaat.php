@@ -5,7 +5,7 @@
             <div class="row align-items-center py-4">
 
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Penghunian Tahun Anggaran <?= $tahun_anggaran ?></h6>
+                    <h6 class="h2 text-white d-inline-block mb-0">Penghunian Penerima Manfaat <?= $penerima_manfaat->nama_penerima_manfaat ?></h6>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
                                             <td><?= $th->tb ?></td>
                                             <td><?= $th->status_huni ?></td>
                                             <td><?= $th->nama_posisi_dokumen_aset ?></td>
-                                            <td><a href="<?= base_url('detail_tb/') . $th->id ?>" type="button" class="btn btn-default btn-sm">Detail</a></td>
+                                            <td><a href="<?= base_url('detail/detail_tb/') . $th->id ?>" type="button" class="btn btn-default btn-sm">Detail</a></td>
                                         </tr>
                                     <?php } ?>
 

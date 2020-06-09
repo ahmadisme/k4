@@ -279,15 +279,26 @@ class Penghunian extends CI_Controller
         public function penghunian_tahun_anggaran()
         {
                 $data['title']     = "SIRUSUN v3.0";
-                $data['title2'] = "Dashboard";
                 $data['tahun_anggaran'] = $this->uri->segment(3);
-
                 $tahun_anggaran = $this->uri->segment(3);
-
-
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'ta' => $tahun_anggaran])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'ta' => $tahun_anggaran])->result();
 
                 $this->load->view('layout/header', $data);
                 $this->load->view('penghunian_tahun_anggaran', $data);
+                $this->load->view('layout/footer', $data);
+        }
+
+        public function penghunian_penerima_manfaat()
+        {
+                $data['title']     = "SIRUSUN v3.0";
+                $id_penerima_manfaat = $this->uri->segment(3);
+                $data['penerima_manfaat'] = $this->db->get_where('tb_penerima_manfaat', ['id_penerima_manfaat' => $id_penerima_manfaat])->row();
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+
+                $this->load->view('layout/header', $data);
+                $this->load->view('penghunian_penerima_manfaat', $data);
                 $this->load->view('layout/footer', $data);
         }
 }

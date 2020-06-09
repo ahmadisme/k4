@@ -148,7 +148,7 @@
                                             <td><?= $rpm->nama_penerima_manfaat ?></td>
                                             <td><?= $rpm->huni ?></td>
                                             <td><?= $rpm->belum_huni ?></td>
-                                            <td><a href="<?= base_url('penghunian/penerima_manfaat/') . $rpm->id_penerima_manfaat ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
+                                            <td><a href="<?= base_url('penghunian/penghunian_penerima_manfaat/') . $rpm->id_penerima_manfaat ?>" type="button" class="btn btn-primary btn-sm">Detail</a></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
