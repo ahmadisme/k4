@@ -1,5 +1,5 @@
 <!-- Header -->
-<div class="header pb-3 d-flex align-items-center" style="min-height: 300px; background-image: url(../../assets/img/gdg.jpeg); background-size: cover; background-position: center top;">
+<div class="header pb-3 d-flex align-items-center" style="min-height: 300px; background-image: url(<?= base_url('assets/img/gdg.jpeg') ?>); background-size: cover; background-position: center top;">
     <!-- Mask -->
     <span class="mask bg-gradient-default opacity-8"></span>
     <!-- Header container -->
