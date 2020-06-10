@@ -7,7 +7,8 @@
                     <h6 class="h2 text-white d-inline-block mb-0">Dashboard</h6>
                 </div>
             </div>
-            <?= $this->session->flashdata('message') ?>
+            <div class="flash-data" data-flashdata=" <?= $this->session->flashdata('message') ?>"></div>
+
         </div>
     </div>
 </div>

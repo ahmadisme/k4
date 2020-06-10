@@ -24,6 +24,9 @@
 <script src="<?= base_url('assets/amcharts4/') ?>charts.js"></script>
 <script src="<?= base_url('assets/amcharts4/') ?>themes/animated.js"></script>
 
+<script src="<?= base_url('assets/js/sweetalert2.all.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/myscript.js') ?>"></script>
+
 <script>
     $(document).ready(function() {
         $('#1').DataTable({

@@ -39,9 +39,7 @@ class Auth extends CI_Controller
                     ];
                     $this->session->set_userdata($data);
                     if ($user->role_id == 1) {
-                        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-          Logged In!
-          </div>');
+                        $this->session->set_flashdata('message', 'login');
                         redirect('welcome');
                     } else {
                         redirect('user');

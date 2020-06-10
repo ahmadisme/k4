@@ -27,12 +27,15 @@
 <script src="<?= base_url('assets/highmaps') ?>/maps/highmaps.js"></script>
 <script src="<?= base_url('assets/highmaps') ?>/maps/modules/exporting.js"></script>
 <script src="<?= base_url('assets/highmaps') ?>/mapdata/countries/id/kaltara.js"></script>
+
+<script src="<?= base_url('assets/js/sweetalert2.all.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/myscript.js') ?>"></script>
 <script>
     $(document).ready(function() {
         $('#1').dataTable({
             "autoWidth": false,
             "columns": [{
-                    "width": "100%"
+                    "width": "50%"
                 },
                 {
                     "width": "10%"
@@ -45,7 +48,7 @@
         $('#2').dataTable({
             "autoWidth": false,
             "columns": [{
-                    "width": "100%"
+                    "width": "50%"
                 },
                 {
                     "width": "10%"
@@ -76,7 +79,7 @@
         $('#4').dataTable({
             "autoWidth": false,
             "columns": [{
-                    "width": "100%"
+                    "width": "50%"
                 },
                 {
                     "width": "20%"
@@ -93,7 +96,7 @@
         $('#5').dataTable({
             "autoWidth": false,
             "columns": [{
-                    "width": "100%"
+                    "width": "50%"
                 },
                 {
                     "width": "20%"
@@ -105,7 +108,28 @@
                     "width": "20%"
                 },
                 {
+                    "width": "30%"
+                }
+
+
+            ]
+        });
+        $('#6').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "50%"
+                },
+                {
                     "width": "20%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "30%"
                 }
 
 
@@ -113,24 +137,7 @@
         });
     });
 </script>
-<!-- <script>
-    $(document).ready(function() {
-        $('#2').dataTable({
-            "autoWidth": false,
-            "columns": [{
-                    "width": "100%"
-                },
-                {
-                    "width": "10%"
-                },
-                {
-                    "width": "20%"
-                },
 
-            ]
-        });
-    });
-</script> -->
 <script>
     // Prepare demo data
     // Data is joined to map using value of 'hc-key' property by default.

@@ -341,12 +341,127 @@ class Penghunian extends CI_Controller
                 sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
                 FROM tb_bangunan 
                 WHERE id_penerima_manfaat = ' . $id_penerima_manfaat . '')->row();
+
+                $data['tahun_anggaran'] = $this->db->query('SELECT tb,nama_penerima_manfaat,ta,id_penerima_manfaat,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE id_penerima_manfaat = ' . $id_penerima_manfaat . '
+                GROUP BY ta')->result();
+
                 $data['penerima_manfaat'] = $this->db->get_where('tb_penerima_manfaat', ['id_penerima_manfaat' => $id_penerima_manfaat])->row();
                 $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
                 $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
 
+                // print_r($data['tahun_anggaran']);
+                // die;
                 $this->load->view('layout/header', $data);
                 $this->load->view('penghunian_penerima_manfaat', $data);
+                $this->load->view('layout/footer', $data);
+        }
+
+        public function penghunian_provinsi()
+        {
+                $data['title']     = "SIRUSUN v3.0";
+                $id_provinsi = $this->uri->segment(3);
+                $data['provinsi'] = $this->db->get_where('tb_provinsi', ['id_provinsi' => $id_provinsi])->row();
+
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan 
+                WHERE id_provinsi = ' . $id_provinsi . '')->row();
+
+                $data['tahun_anggaran'] = $this->db->query('SELECT tb,nama_penerima_manfaat,id_penerima_manfaat,ta,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE id_provinsi = ' . $id_provinsi . '
+                GROUP BY ta')->result();
+
+                $data['penerima_manfaat'] = $this->db->query('SELECT tb,nama_penerima_manfaat,id_penerima_manfaat,ta,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE id_provinsi = ' . $id_provinsi . '
+                GROUP BY nama_penerima_manfaat')->result();
+
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_provinsi' => $id_provinsi])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_provinsi' => $id_provinsi])->result();
+
+                // print_r($data['tahun_anggaran']);
+                // die;
+                $this->load->view('layout/header', $data);
+                $this->load->view('penghunian_provinsi', $data);
+                $this->load->view('layout/footer', $data);
+        }
+
+        public function penghunian_provinsi_tahun_anggaran()
+        {
+                $data['title']     = "SIRUSUN v3.0";
+                $id_provinsi = $this->uri->segment(3);
+                $tahun_anggaran = $this->uri->segment(4);
+
+                $data['provinsi'] = $this->db->get_where('tb_provinsi', ['id_provinsi' => $id_provinsi])->row();
+                $data['ta'] = $tahun_anggaran;
+
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan 
+                WHERE id_provinsi = ' . $id_provinsi . '
+                AND ta =' . $tahun_anggaran . '')->row();
+
+
+                $data['penerima_manfaat'] = $this->db->query('SELECT tb,nama_penerima_manfaat,id_penerima_manfaat,ta,id_provinsi,ta,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE id_provinsi = ' . $id_provinsi . '
+                AND ta = ' . $tahun_anggaran . '
+                GROUP BY nama_penerima_manfaat')->result();
+
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_provinsi' => $id_provinsi, 'ta' => $tahun_anggaran])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_provinsi' => $id_provinsi, 'ta' => $tahun_anggaran])->result();
+
+
+                $this->load->view('layout/header', $data);
+                $this->load->view('penghunian_provinsi_tahun_anggaran', $data);
+                $this->load->view('layout/footer', $data);
+        }
+
+        public function penghunian_provinsi_tahun_anggaran_penerima_manfaat()
+        {
+                $data['title']     = "SIRUSUN v3.0";
+                $id_provinsi = $this->uri->segment(3);
+                $tahun_anggaran = $this->uri->segment(4);
+                $id_penerima_manfaat = $this->uri->segment(5);
+
+                $data['provinsi'] = $this->db->get_where('tb_provinsi', ['id_provinsi' => $id_provinsi])->row();
+                $data['ta'] = $tahun_anggaran;
+                $data['penerima_manfaat'] = $this->db->get_where('tb_penerima_manfaat', ['id_penerima_manfaat' => $id_penerima_manfaat])->row();
+
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan 
+                WHERE id_provinsi = ' . $id_provinsi . '
+                AND ta =' . $tahun_anggaran . '
+                AND id_penerima_manfaat=' . $id_penerima_manfaat . '')->row();
+
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_provinsi' => $id_provinsi, 'ta' => $tahun_anggaran, 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_provinsi' => $id_provinsi, 'ta' => $tahun_anggaran, 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+
+
+                $this->load->view('layout/header', $data);
+                $this->load->view('penghunian_provinsi_tahun_anggaran_penerima_manfaat', $data);
                 $this->load->view('layout/footer', $data);
         }
 }
