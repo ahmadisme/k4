@@ -111,7 +111,7 @@
                 <div class="card-body">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-                            <table class="table table-hover" id="1">
+                            <table class="table table-hover" id="3">
                                 <thead>
                                     <tr>
                                         <th>Tahun Anggaran</th>
@@ -133,7 +133,7 @@
                             </table>
                         </div>
                         <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-                            <table class="table table-hover" id="2">
+                            <table class="table table-hover" id="4">
                                 <thead>
                                     <tr>
                                         <th>Penerima Manfaat</th>

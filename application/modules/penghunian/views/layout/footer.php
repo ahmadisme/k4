@@ -29,28 +29,108 @@
 <script src="<?= base_url('assets/highmaps') ?>/mapdata/countries/id/kaltara.js"></script>
 <script>
     $(document).ready(function() {
-        $('#1').DataTable({
+        $('#1').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "10%"
+                },
+                {
+                    "width": "20%"
+                },
+            ]
+        });
+        $('#2').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "10%"
+                },
+                {
+                    "width": "20%"
+                },
 
-            "iDisplayLength": 5,
-            "aLengthMenu": [
-                [5, 10, 15, -1],
-                [5, 10, 15, "All"]
+            ]
+        });
+        $('#3').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "30%"
+                },
+                {
+                    "width": "20%"
+                }
+
+            ]
+        });
+        $('#4').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "30%"
+                },
+                {
+                    "width": "20%"
+                }
+
+            ]
+        });
+        $('#5').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "20%"
+                }
+
+
             ]
         });
     });
 </script>
-<script>
+<!-- <script>
     $(document).ready(function() {
-        $('#2').DataTable({
+        $('#2').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "100%"
+                },
+                {
+                    "width": "10%"
+                },
+                {
+                    "width": "20%"
+                },
 
-            "iDisplayLength": 5,
-            "aLengthMenu": [
-                [5, 10, 15, -1],
-                [5, 10, 15, "All"]
             ]
         });
     });
-</script>
+</script> -->
 <script>
     // Prepare demo data
     // Data is joined to map using value of 'hc-key' property by default.

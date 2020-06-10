@@ -281,6 +281,21 @@ class Penghunian extends CI_Controller
                 $data['title']     = "SIRUSUN v3.0";
                 $data['tahun_anggaran'] = $this->uri->segment(3);
                 $tahun_anggaran = $this->uri->segment(3);
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan 
+                WHERE ta = ' . $tahun_anggaran . '')->row();
+
+                $data['penerima_manfaat'] = $this->db->query('SELECT tb,nama_penerima_manfaat,ta,id_penerima_manfaat,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE ta = ' . $tahun_anggaran . '
+                GROUP BY nama_penerima_manfaat')->result();
+
                 $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'ta' => $tahun_anggaran])->result();
                 $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'ta' => $tahun_anggaran])->result();
 
@@ -289,10 +304,43 @@ class Penghunian extends CI_Controller
                 $this->load->view('layout/footer', $data);
         }
 
+        public function penghunian_tahun_anggaran_penerima_manfaat()
+        {
+                $data['title']     = "SIRUSUN v3.0";
+
+                $id_penerima_manfaat = $this->uri->segment(3);
+                $tahun_anggaran = $this->uri->segment(4);
+                $data['tahun_anggaran'] = $this->uri->segment(4);
+                $data['penerima_manfaat'] = $this->db->get_where('tb_penerima_manfaat', ['id_penerima_manfaat' => $id_penerima_manfaat])->row();
+
+
+
+                $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'ta' => $tahun_anggaran, 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+                $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'ta' => $tahun_anggaran, 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
+
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,id_penerima_manfaat,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan
+                WHERE ta = ' . $tahun_anggaran . '
+                AND id_penerima_manfaat = ' . $id_penerima_manfaat . '')->row();
+
+                $this->load->view('layout/header', $data);
+                $this->load->view('penghunian_tahun_anggaran_penerima_manfaat', $data);
+                $this->load->view('layout/footer', $data);
+        }
+
         public function penghunian_penerima_manfaat()
         {
                 $data['title']     = "SIRUSUN v3.0";
                 $id_penerima_manfaat = $this->uri->segment(3);
+                $data['jumlah_tb'] = $this->db->query('SELECT ta,tb,
+                sum(tb) AS total,
+                sum(case when status_huni= "Huni" then tb else 0 end) AS huni,
+                sum(case when status_huni= "Belum Huni" then tb else 0 end) AS belum_huni
+                FROM tb_bangunan 
+                WHERE id_penerima_manfaat = ' . $id_penerima_manfaat . '')->row();
                 $data['penerima_manfaat'] = $this->db->get_where('tb_penerima_manfaat', ['id_penerima_manfaat' => $id_penerima_manfaat])->row();
                 $data['tb_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();
                 $data['tb_belum_huni'] = $this->db->get_where('tb_bangunan', ['status_huni' => "Belum Huni", 'id_penerima_manfaat' => $id_penerima_manfaat])->result();

@@ -50,107 +50,11 @@
 </head>
 
 <body>
-
-    <!-- Sidenav -->
-    <!-- <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
-        <div class="scrollbar-inner">
-            
-            <div class="sidenav-header d-flex align-items-center">
-                <a class="navbar-brand" href="https://demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/dashboard.html">
-                    <img src="<?= base_url('assets/') ?>img/logoo.png" class="navbar-brand-img" alt="...">
-                </a>
-                <div class="ml-auto">
-                    <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
-                        <div class="sidenav-toggler-inner">
-                            <i class="sidenav-toggler-line"></i>
-                            <i class="sidenav-toggler-line"></i>
-                            <i class="sidenav-toggler-line"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="navbar-inner">
-              
-                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-                   
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('welcome') ?>">
-                                <i class="ni ni-archive-2 text-green"></i>
-                                <span class="nav-link-text">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('upload') ?>">
-                                <i class="ni ni-chart-pie-35 text-info"></i>
-                                <span class="nav-link-text">Upload</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/pages/calendar.html">
-                                <i class="ni ni-calendar-grid-58 text-red"></i>
-                                <span class="nav-link-text">Calendar</span>
-                            </a>
-                        </li>
-                    </ul>
-                   
-                    <hr class="my-3">
-                  
-                    <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
-                    
-                    <ul class="navbar-nav mb-md-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('setting') ?>">
-                                <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Setting</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/docs/foundation/colors.html" target="_blank">
-                                <i class="ni ni-palette"></i>
-                                <span class="nav-link-text">Foundation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/docs/components/alerts.html" target="_blank">
-                                <i class="ni ni-ui-04"></i>
-                                <span class="nav-link-text">Components</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard-pro/docs/plugins/charts.html" target="_blank">
-                                <i class="ni ni-chart-pie-35"></i>
-                                <span class="nav-link-text">Plugins</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav> -->
-    <!-- Main content -->
     <div class="main-content" id="panel">
         <!-- Topnav -->
         <nav class="navbar navbar-top navbar-expand navbar-dark bg-default">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Search form -->
-                    <!-- <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-                        <div class="form-group mb-0">
-                            <div class="input-group input-group-alternative input-group-merge">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
-                                </div>
-                                <input class="form-control" placeholder="Search" type="text">
-                            </div>
-                        </div>
-                        <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </form> -->
-                    <!-- Navbar links -->
-
                     <ul class=" navbar-nav align-items-center mr-auto ml-md-0">
                         <li>
                             <a class="navbar" href="<?= base_url('welcome') ?>">
@@ -158,17 +62,17 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="<?= base_url('welcome') ?>" ">
+                            <a class="nav-link font-weight-bold" href="<?= base_url('welcome') ?>" ">
                                 Dashboard
                             </a>
                         </li>
                         <li>
-                            <a class=" nav-link" href="<?= base_url('penghunian') ?>" ">
+                            <a class=" nav-link font-weight-bold" href="<?= base_url('penghunian') ?>" ">
                                 Penghunian
                             </a>
                         </li>
                         <li>
-                            <a class=" nav-link" href="#" ">
+                            <a class=" nav-link font-weight-bold" href="#" ">
                                 Pengelolaan
                             </a>
                         </li>

@@ -52,9 +52,7 @@
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0 lebar100" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Belum huni</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 lebar100" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-calendar-grid-58 mr-2"></i>Penerima Manfaat</a>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="tab-content" id="myTabContent">
@@ -98,30 +96,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-                            <table class="table table-hover" id="5">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>Penerima Manfaat</th>
-                                        <th>TB</th>
-                                        <th>Huni</th>
-                                        <th>Belum Huni</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($penerima_manfaat as $pm) { ?>
-                                        <tr>
-                                            <td><?= $pm->nama_penerima_manfaat ?></td>
-                                            <td><?= $pm->total ?></td>
-                                            <td><?= $pm->huni ?></td>
-                                            <td><?= $pm->belum_huni ?></td>
-                                            <td><a href="<?= base_url('penghunian/penghunian_tahun_anggaran_penerima_manfaat/') . $pm->id_penerima_manfaat ?>/<?= $tahun_anggaran ?>" type="button" class="btn btn-default btn-sm">Detail</a></td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
+
                     </div>
                 </div>
             </div>
