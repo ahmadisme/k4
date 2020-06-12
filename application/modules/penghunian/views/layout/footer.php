@@ -62,7 +62,24 @@
         $('#3').dataTable({
             "autoWidth": false,
             "columns": [{
-                    "width": "100%"
+                    "width": "50%"
+                },
+                {
+                    "width": "20%"
+                },
+                {
+                    "width": "30%"
+                },
+                {
+                    "width": "20%"
+                }
+
+            ]
+        });
+        $('#7').dataTable({
+            "autoWidth": false,
+            "columns": [{
+                    "width": "50%"
                 },
                 {
                     "width": "20%"

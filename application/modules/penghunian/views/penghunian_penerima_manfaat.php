@@ -37,39 +37,39 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row align-items-center">
-                        <div class="col-8">
-                            <h3 class="mb-0">Detail</h3>
+                        <div class="col-12">
+                            <div class="nav-wrapper">
+                                <ul class="nav nav-pills nav-fill flex-column flex-md-row " id="tabs-icons-text" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-success lebar100 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
+                                            <h3>
+                                                <font color="white"> Huni</font>
+                                            </h3>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-danger lebar100" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
+                                            <h3>
+                                                <font color="white"> Belum Huni</font>
+                                            </h3>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-info lebar100" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
+                                            <h3>
+                                                <font color="white"> Tahun Anggaran</font>
+                                            </h3>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
 
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="nav-wrapper">
-                        <ul class="nav nav-pills nav-fill flex-column flex-md-row " id="tabs-icons-text" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-info lebar100 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
-                                    <h3>
-                                        <font color="white"> Huni</font>
-                                    </h3>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-info lebar100" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
-                                    <h3>
-                                        <font color="white"> Belum Huni</font>
-                                    </h3>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 bg-gradient-info lebar100" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><img src="<?= base_url('assets') ?>/img/flat.png" width="42" height="50">
-                                    <h3>
-                                        <font color="white"> Tahun Anggaran</font>
-                                    </h3>
-                                </a>
-                            </li>
 
-                        </ul>
-                    </div>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
                             <table class="table align-items-center" id="1">
