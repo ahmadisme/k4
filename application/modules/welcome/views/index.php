@@ -7,8 +7,10 @@
                     <h6 class="h2 text-white d-inline-block mb-0">Dashboard</h6>
                 </div>
             </div>
-            <div class="flash-data" data-flashdata=" <?= $this->session->flashdata('message') ?>"></div>
 
+            <?php if ($this->session->flashdata('message')) : ?>
+                <div class="flash-data" data-flashdata=" <?= $this->session->flashdata('message') ?>"></div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -56,13 +58,13 @@
                         </div>
                         <div class="col ml--2">
                             <h4 class="mb-0">
-                                <a href="#!">Terhuni</a>
+                                <a href="#!">Penghunian</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
                                 <font style="font-weight: bold;"><?= $huni ?></font>
                             </p>
                             <span class="text-success">●</span>
-                            <small>Active</small>
+                            <small>Terhuni</small>
                         </div>
                         <div class="col-auto">
                             <a href="<?= base_url('penghunian') ?>" type="button" class="btn btn-sm btn-primary">Go to Dashboard</a>
@@ -83,13 +85,13 @@
                         </div>
                         <div class="col ml--2">
                             <h4 class="mb-0">
-                                <a href="#!">BAST</a>
+                                <a href="#!">Pengelolaan</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
                                 <font style="font-weight: bold;"><?= $belum_huni ?></font>
                             </p>
                             <span class="text-success">●</span>
-                            <small>Active</small>
+                            <small>Sudah BAST</small>
                         </div>
                         <div class="col-auto">
                             <button type="button" class="btn btn-sm btn-primary">Go to Dashboard</button>
