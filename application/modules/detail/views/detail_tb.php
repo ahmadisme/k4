@@ -170,7 +170,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0 text-white">Total traffic</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0 text-white">Status Huni</h5>
                                     <span class="h2 font-weight-bold mb-0 text-white">350,897</span>
                                 </div>
                                 <div class="col-auto">
@@ -179,10 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-3 mb-0 text-sm">
-                                <span class="text-white mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                <span class="text-nowrap text-light">Since last month</span>
-                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -192,7 +189,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0 text-white">Performance</h5>
+                                    <h5 class="card-title text-uppercase text-muted mb-0 text-white">Posisi Dokumen Aset</h5>
                                     <span class="h2 font-weight-bold mb-0 text-white">49,65%</span>
                                 </div>
                                 <div class="col-auto">
@@ -201,10 +198,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-3 mb-0 text-sm">
-                                <span class="text-white mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                <span class="text-nowrap text-light">Since last month</span>
-                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -213,7 +207,7 @@
                 <div class="card-header">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h3 class="mb-0">Edit profile </h3>
+                            <h3 class="mb-0">Detail</h3>
                         </div>
                         <div class="col-4 text-right">
                             <a href="#!" class="btn btn-sm btn-primary">Settings</a>
@@ -222,18 +216,18 @@
                 </div>
                 <div class="card-body">
                     <form>
-                        <h6 class="heading-small text-muted mb-4">User information</h6>
+                        <h6 class="heading-small text-muted mb-4">Information</h6>
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Username</label>
+                                        <label class="form-control-label" for="input-username">Nama Lokasi</label>
                                         <input type="text" id="input-username" class="form-control" placeholder="Username" value="lucky.jesse">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="input-email">Email address</label>
+                                        <label class="form-control-label" for="input-email">Alamat</label>
                                         <input type="email" id="input-email" class="form-control" placeholder="jesse@example.com">
                                     </div>
                                 </div>
@@ -241,13 +235,13 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="input-first-name">First name</label>
+                                        <label class="form-control-label" for="input-first-name">Kota</label>
                                         <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="Lucky">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="input-last-name">Last name</label>
+                                        <label class="form-control-label" for="input-last-name">Provinsi</label>
                                         <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="Jesse">
                                     </div>
                                 </div>

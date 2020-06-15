@@ -82,7 +82,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class=" nav-link font-weight-bold" href="#" ">
+                            <a class=" nav-link font-weight-bold" href="<?= base_url('pengelolaan') ?>" ">
                                 Pengelolaan
                             </a>
                         </li>

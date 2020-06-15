@@ -154,7 +154,19 @@
         });
     });
 </script>
-
+<script>
+    $('.count').each(function() {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+</script>
 <script>
     // Prepare demo data
     // Data is joined to map using value of 'hc-key' property by default.

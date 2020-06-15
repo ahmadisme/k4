@@ -39,9 +39,7 @@
                             <span class="text-success">●</span>
                             <small>Active</small>
                         </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">Go to Dashboard</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -67,7 +65,7 @@
                             <small>Terhuni</small>
                         </div>
                         <div class="col-auto">
-                            <a href="<?= base_url('penghunian') ?>" type="button" class="btn btn-sm btn-primary">Go to Dashboard</a>
+                            <a href="<?= base_url('penghunian') ?>" class="btn btn-sm btn-primary">Go to Dashboard</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +92,7 @@
                             <small>Sudah BAST</small>
                         </div>
                         <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">Go to Dashboard</button>
+                            <a href="<?= base_url('pengelolaan') ?>" class="btn btn-sm btn-primary">Go to Dashboard</a>
                         </div>
                     </div>
                 </div>
