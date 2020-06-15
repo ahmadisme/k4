@@ -62,6 +62,13 @@
             height: 90px;
 
         }
+
+        .lebar-card {
+            height: 250px;
+            box-shadow: 5px 10px #BEBEBE;
+            border: 0;
+
+        }
     </style>
 
 

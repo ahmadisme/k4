@@ -15,58 +15,31 @@
 <!-- Page content -->
 <div class="container-fluid mt--6">
     <div class="row">
-        <div class="col-4">
-            <div class="card card-pricing bg-gradient-danger border-0 text-center mb-4">
-                <div class="card-header border-0 bg-transparent">
-                    <h4 class="text-uppercase ls-1 text-white  mb-0">Belum bisa proses</h4>
-                </div>
-                <div class="card-body px-lg-7">
-                    <div class="display-2 text-white count">49</div>
-                    <span class=" text-white">TB</span>
-                </div>
-            </div>
+        <div class="col-lg-3 pb-3">
+            <button type="button" class="btn btn-default btn-block lebar-card bg-gradient-purple ">Default</button>
         </div>
-        <div class="col-4">
-            <div class="card card-pricing bg-gradient-yellow border-0 text-center mb-4">
-                <div class="card-header border-0 bg-transparent">
-                    <h4 class="text-uppercase ls-1 text-white  mb-0">Proses</h4>
-                </div>
-                <div class="card-body px-lg-7">
-                    <div class="display-2 text-white count">49</div>
-                    <span class=" text-white">TB</span>
-                </div>
-            </div>
+        <div class="col-lg-3 pb-3">
+            <button type="button" class="btn btn-default btn-block lebar-card bg-gradient-danger">Default</button>
         </div>
-        <div class="col-4">
-            <div class="card card-pricing bg-gradient-success border-0 text-center mb-4">
-                <div class="card-header border-0 bg-transparent">
-                    <h4 class="text-uppercase ls-1 text-white  mb-0">sudah bast</h4>
-                </div>
-                <div class="card-body px-lg-7">
-                    <div class="display-2 text-white count">49</div>
-                    <span class=" text-white">TB</span>
-                </div>
-            </div>
+        <div class="col-lg-3 pb-3">
+            <button type="button" class="btn btn-default btn-block lebar-card bg-gradient-yellow">Default</button>
+        </div>
+        <div class="col-lg-3 pb-3">
+            <button type="button" class="btn btn-default btn-block lebar-card bg-gradient-success">Default</button>
         </div>
     </div>
-    <div class="row px-6">
+    <div class="row">
         <div class="col-12">
             <div class="nav-wrapper">
-                <ul class="nav nav-pills nav-pills-circle" id="tabs_2" role="tablist">
+                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link rounded-circle bg-gradient-info active " id="home-tab" data-toggle="tab" href="#tabs_2_1" role="tab" aria-controls="home" aria-selected="true">
-                            <font style="font-weight: bold; color:white;">T.A</font>
-                        </a>
+                        <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-cloud-upload-96 mr-2"></i>Tahun Anggaran</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-gradient-info" id="profile-tab" data-toggle="tab" href="#tabs_2_2" role="tab" aria-controls="profile" aria-selected="false">
-                            <font style="font-weight: bold; color:white;">P.M</font>
-                        </a>
+                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-bell-55 mr-2"></i>Penerima Manfaat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-gradient-info" id="contact-tab" data-toggle="tab" href="#tabs_2_3" role="tab" aria-controls="contact" aria-selected="false">
-                            <font style="font-weight: bold; color:white;">Peta</font>
-                        </a>
+                        <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-calendar-grid-58 mr-2"></i>Peta Persebaran</a>
                     </li>
                 </ul>
             </div>
