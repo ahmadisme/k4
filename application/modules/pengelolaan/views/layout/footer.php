@@ -263,6 +263,144 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        tampil_data_provinsi();
+        tampil_data_belum_bisa_proses();
+        tampil_data_proses();
+        tampil_data_bast();
+        tampil_data_tahun_anggaran();
+
+        $('#mydata').dataTable({
+            "autoWidth": false,
+        });
+
+        $('#bbp').dataTable({
+            "autoWidth": false,
+        });
+        $('#proses').dataTable({
+            "autoWidth": false,
+        });
+        $('#bast').dataTable({
+            "autoWidth": false,
+        });
+        $('#data_ta').dataTable({
+            "autoWidth": false,
+        });
+
+
+        function tampil_data_provinsi() {
+            $.ajax({
+                type: 'ajax',
+                url: '<?= base_url('pengelolaan') ?>/data_bangunan',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].nama_bangunan + '</td>' +
+                            '<td>' + data[i].status_huni + '</td>' +
+                            '<td>' + data[i].nama_posisi_dokumen_aset + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data').html(html);
+                }
+
+            });
+        }
+
+        function tampil_data_belum_bisa_proses() {
+            $.ajax({
+                type: 'ajax',
+                url: '<?= base_url('pengelolaan') ?>/data_bangunan_belum_bisa_proses',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].nama_bangunan + '</td>' +
+                            '<td>' + data[i].nama_posisi_dokumen_aset + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data_bbp').html(html);
+                }
+
+            });
+        }
+
+        function tampil_data_proses() {
+            $.ajax({
+                type: 'ajax',
+                url: '<?= base_url('pengelolaan') ?>/data_bangunan_proses',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].nama_bangunan + '</td>' +
+                            '<td>' + data[i].nama_posisi_dokumen_aset + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data_proses').html(html);
+                }
+
+            });
+        }
+
+        function tampil_data_bast() {
+            $.ajax({
+                type: 'ajax',
+                url: '<?= base_url('pengelolaan') ?>/data_bangunan_bast',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].nama_bangunan + '</td>' +
+                            '<td>' + data[i].nama_posisi_dokumen_aset + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data_bast').html(html);
+                }
+
+            });
+        }
+
+        function tampil_data_tahun_anggaran() {
+            $.ajax({
+                type: 'ajax',
+                url: '<?= base_url('pengelolaan') ?>/data_bangunan_tahun_anggaran',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].ta + '</td>' +
+                            '<td>' + data[i].total + '</td>' +
+                            '<td>' + data[i].belum + '</td>' +
+                            '<td>' + data[i].proses + '</td>' +
+                            '<td>' + data[i].sudah_bast + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data_tahun_anggaran').html(html);
+                }
+
+            });
+        }
+
+    });
+</script>
+
 
 
 </body>

@@ -26,7 +26,7 @@ class Welcome extends CI_Controller
 
         $data['tb_bast'] = $this->db->query('SELECT tb,ta,id_posisi_dokumen_aset,
         sum(tb) AS total,
-        sum(case when id_posisi_dokumen_aset= "10" then tb else 0 end) AS bast
+        sum(case when id_posisi_dokumen_aset= "10" OR id_posisi_dokumen_aset="9" then tb else 0 end) AS bast
         FROM tb_bangunan GROUP BY ta')->result();
 
         $data['diagram_pengelolaan'] = $this->db->query('SELECT tb,ta,

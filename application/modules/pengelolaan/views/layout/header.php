@@ -64,10 +64,18 @@
         }
 
         .lebar-card {
-            height: 250px;
+            height: 100px;
             box-shadow: 5px 10px #BEBEBE;
             border: 0;
 
+        }
+
+        .full-screen {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            top: 0;
+            left: 0;
         }
     </style>
 

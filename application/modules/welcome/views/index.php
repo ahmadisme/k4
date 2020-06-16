@@ -86,7 +86,7 @@
                                 <a href="#!">Pengelolaan</a>
                             </h4>
                             <p class="text-xl text-default mb-0">
-                                <font style="font-weight: bold;"><?= $belum_huni ?></font>
+                                <font style="font-weight: bold;"><?= $diagram_pengelolaan->sudah_bast ?></font>
                             </p>
                             <span class="text-success">●</span>
                             <small>Sudah BAST</small>
