@@ -69,6 +69,7 @@
                                         <th>belum bisa proses</th>
                                         <th>proses</th>
                                         <th>sudah bast</th>
+                                        <th>action</th>
                                     </tr>
                                 </thead>
                                 <tbody id="show_data_tahun_anggaran">
