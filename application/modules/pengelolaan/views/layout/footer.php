@@ -390,7 +390,7 @@
                             '<td>' + data[i].belum + '</td>' +
                             '<td>' + data[i].proses + '</td>' +
                             '<td>' + data[i].sudah_bast + '</td>' +
-                            '<td>' + '<a href=pengelolaan/tahun_anggaran/' + data[i].ta + '>detail</a>' + '</td>' +
+                            '<td>' + '<a href=pengelolaan/tahun_anggaran/' + data[i].ta + '>action</a>' + '</td>' +
                             '</tr>';
                     }
                     $('#show_data_tahun_anggaran').html(html);
